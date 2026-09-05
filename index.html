@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hninyi | Cloud & Web Portfolio</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="page-wrapper">
+  <header>
+    <!--Navigation Bar-->
+    <nav class="navbar"  role="navigation"  aria-label="Main Navigation">
+     <div class="nav-brand" ><img src="images/profile avator.jpg"  alt="portfolio image" width="40px">Hninyi</div> 
+     <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+      ☰
+      <span class="visually-hidden"></span>
+    </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>  
+  </header>
+  <!--Hero section lay out generated with the help of ChatGPT(OpenAI, 2025)-->
+  <section class="hero">
+    <!--hero image created using CanvaAI (Canva,2025)-->
+     <img src="images/A computer screen with code and cloud upload icons, tech workspace with coffee mug and green plant, warm light and productivity feel.jpg"
+      alt="Hero Background"  class="hero-img"/>  <!--Background image for the hero--> 
+    <div class="hero-content">
+      <h1>Hello, I'm Hninyi</h1>
+        <p>Aspiring Cloud Engineer and Web Developer building hands-on projects with AWS, Terraform, HTML, CSS and JavaScript.</p>
+         <a href="projects.html" class="cta" title="Click here">View My Projects</a>
+    </div>
+  </section>
+  <section class="featured-section">
+    <h2>Featured Projects & Skills</h2>
+    <p>Explore some of my web development and cloud computing work.</p>
+  </section>
+  <!--Card images created using CanvaAI(Canva,2025)-->
+  <div class="card-container"> 
+        <!--Projects-->
+        <div class="card">
+         <a href="projects.html">
+          <img src="images/A computer screen with code and cloud upload icons, tech workspace with coffee mug and green plant, warm light and productivity feel (1).jpg"  alt="Cloud Library Project"
+           class="card-img">
+          <h2>Cloud Library Project</h2>
+          </a>
+        </div>
+        <!--Projects-->
+        <div class="card">
+         <a href="projects.html">
+          <img src="images/A computer screen with code and cloud upload icons, tech workspace with coffee mug and green plant, warm light and productivity feel (2).jpg" alt="AWS Cloud Deployment"
+           class="card-img">
+          <h2>AWS Cloud Deployment</h2> 
+          </a>
+        </div>
+        <div class="card">
+         <a href="skills.html">
+          <img src="images/A floating animated design with web development  listed, and floating decorative elements like html, css, python codes.jpg" alt="Web Development"
+          class="card-img">
+          <h2>Web Development</h2>
+          </a>
+        </div>
+        <div class="card">
+          <a href="skills.html">
+            <img src="images/Firefly_make a image of IT technology include codes, cloud computing, books, clean soft light 721675.jpg" alt="Cloud Computing and Terraform skills" class="card-img">
+            <h2>Cloud & Terraform Skills</h2>
+          </a>
+        </div>  
+     </div> 
+    <footer>
+       <p>&copy; 2026 Hninyi. Built with HTML, CSS and JavaScript.</p>
+    </footer> 
+</div> <!--page wrapper close-->  
+<script>
+//Navigation Script
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      links.classList.toggle('open');
+    });
+
+ </script>    
+</body>
+</html>

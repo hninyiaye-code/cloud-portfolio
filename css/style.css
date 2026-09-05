@@ -1,0 +1,561 @@
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7fb;
+  color: #243447;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #16324f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  position: relative;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;         /* vertically center image and text */
+  gap: 8px;                    /* space between image and text */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.nav-links li a.active {
+  background-color: white;
+  color: #8ecae6;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover {
+  background: #8ecae6;
+  border-radius: 4px;
+}
+
+/* Hero Section Setup */
+/*Hero section styling supported by ChatGPT(OpenAI, 2025)*/
+.hero {
+    position: relative;
+    height: 75vh; /*Change to 50vh to 75vh*/
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /*1rem = 16px*/
+    background: #5885AF;
+}
+
+.hero-img { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3; /*Make image more visible layout generated with help of ChatGPT(OpenAI,2025)*/
+    filter:blur(2px);
+}
+
+ /* style heading, paragraph and cta*/
+.hero-content {
+    position:relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fcf3cf;
+    padding: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #fcf3cf;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cta {
+    background: #f5b041  ;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 16px rgba(56, 189, 248, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.cta:hover {
+    background: #f0d957;;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+.featured-section {
+  text-align:center;
+  padding:40px 20px 10px;
+}
+.featured-section h2 {
+  color:#16324f;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+.featured-section p {
+  color:#5f6b76;
+  font-size:1rem;
+}
+/* Container for cards */
+.card-container {
+  max-width: 1200px;        
+  margin: 0 auto;           /* Center the container */
+  display: grid;           
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;                /* Space between cards */
+  padding: 20px;            
+}
+
+/* Card Styles */
+.card {
+  background: #ebf7f4;
+  border-radius: 15px; /* rounded corner */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 340px;  /*make all cards same height*/
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 190px;  /*same image height for every card*/
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  color: #01989f;
+  padding: 1rem;
+  text-align: center;
+  margin:0;
+  padding: 15px 10px;
+  flex:1;  /*center title in remaining space*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card:hover h2 {
+  color: #f5b041;
+}
+footer {
+  background: #004c97;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive==Home Page */ /*Mobile Style*/
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #004c97;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .hero {
+    height: auto;
+    min-height: 65vh;
+    padding: 40px 20px; 
+  }
+ .hero-content {
+  width: 100%;
+  padding: 20px;
+  }
+ .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+  }
+  .card-img {
+    height: 190px;
+  }
+  .featured-section {
+    padding: 30px 20px 10px;
+  }
+  .featured-section h2 {
+    font-size: 1.7rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+  }
+  .about-info {
+    padding: 0;
+  }
+  .services-photo {
+    grid-template-columns: 1fr; /*Stack vertically on mobile*/
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-form .cta {
+    width: 100%;
+  }
+}
+
+/* About Banner*/
+.banner-body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #fffff5;
+  color: #654509;
+  padding: 2px;
+}
+
+.about-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/*image generated with help of Canva*/
+.banner-img {
+    width: 100%; 
+    height: 230px;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+/*Banner layout and overlay text guidance from ChatGPT(OpenAI,2025*/
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*Offset the element back by 50% from the left of the parent*/ 
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/*Layout adjustments guided with the help of ChatGPT AI(OpenAI,2025)*/
+/*About Content*/
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  margin: auto;
+  flex-wrap: wrap; /*responsive on small screens*/
+  padding: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.about-photo {
+  flex: 1;
+  background-color: #007c91;
+  color:white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.oval-photo {
+  width: 250px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 3rem;
+  margin-top:2rem;
+}
+.about-photo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.about-photo p {
+  font-size: 0.95rem;
+  margin-bottom: 5rem;
+  line-height:1.4;
+}
+.about-social-icons a {
+  font-size:1.3rem;
+  margin: 0 8px;
+  color:white;
+  text-decoration: none;
+  margin-bottom: 4rem;
+}
+/*Mission, Values Section*/
+.about-info {
+  flex: 2;
+  padding-left: 1rem;
+  text-align: left;
+  line-height: 1.8;
+  margin-bottom:2rem;
+}
+.about-info h2 {
+  color: #5b3b0f;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top:2.5rem;
+}
+.about-info ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  margin-top: 1rem;
+}
+/*lay out button to keep inline with text, with guided by ChatGPT(OpenAI,2025)*/
+.cta-outline {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 0.75rem 1.5rem;
+  border:2px solid #1abc9c;
+  background-color: #f5b041;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.cta-outline:hover {
+  background-color: #f69220;
+  color: white;
+}
+
+/*Projects Banner*/
+/*Use external google font: Roboto*/
+.roboto-body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto ;
+  font-weight: weight ;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  background-color: #f2f2f2 ;
+}
+
+.projects-banner {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  padding: 20px;
+  box-sizing: border-box;
+  color:lightcyan;
+  background: radial-gradient(circle,#16a085,#5dade2);
+}
+
+.projects-banner h1 {
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.projects-banner p {
+  font-size: 1.1rem;
+  margin: 0 auto;
+  max-width: 750px;
+  line-height: 1.5;
+  text-align: center;
+  color:lightcyan;
+}
+
+/*Projects Section*/
+.projects-section {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+  padding: 40px 20px;
+}
+
+/*Projects Card*/
+.projects-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: white;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+/*Project Image*/
+.projects-image {
+  width: 45%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*Project Information*/
+.projects-info {
+  flex: 1;
+}
+
+.projects-info h2 {
+  color: #16324f;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.projects-info h3 {
+  color: #2874a6;
+  margin-top: 25px;
+}
+
+.projects-info p {
+  color: #4f5d6b;
+  line-height: 1.7;
+}
+
+.projects-tech {
+  font-weight: 600;
+  color: #4f5d6b;
+  line-height: 1.8;
+}
+
+/*Buttons*/
+.projects-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.projects-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #2874a6;
+  color: #2874a6;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projects-link:hover {
+  background-color: #2874a6;
+  color: white;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  .projects-card {
+    flex-direction: column;
+  }
+  .projects-image {
+    width: 100%;
+    height: 230px;
+  }
+  .projects-info h2 {
+    font-size: 1.6rem;
+  }
+}

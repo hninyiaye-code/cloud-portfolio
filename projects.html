@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Hninyi</title>
+    <link rel="stylesheet"   href="css/style.css"/>
+    <!--Use external google font: Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,
+      100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="roboto-body">
+<div class="page-wrapper">
+
+ <header>
+    <!--Navigation Bar-->
+    <nav class="navbar"  role="navigation"  aria-label="Main Navigation">
+     <div class="nav-brand" ><img src="images/profile avator.jpg"  alt="portfolio image" width="40px">Hninyi</div> 
+     <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+      ☰
+      <span class="visually-hidden"></span>
+    </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>  
+  </header>
+ <header class="projects-banner">
+  <h1>My Projects</h1>
+  <p>Hands-on projects in web development, AWS cloud deployment and infrastructure automation.</p>
+  </header>
+<main class="projects-section">
+  <!--Cloud Library Project-->
+  <article class="projects-card">
+    <img src="images/A computer screen with code and cloud upload icons, tech workspace with coffee mug and green plant, warm light and productivity feel (2).jpg"
+    alt="Cloud Library Management System" class="projects-image">
+
+    <div class="projects-info">
+      <h2>Cloud Library Management System</h2>
+      <p>A responsive library management website built with HTML, CSS and JavaScript. I used this project to practice
+        front-end development, Git and GitHub, AWS deployment and Infrastructure as Code.
+      </p>
+
+      <h3>Technologies Used</h3>
+      <p class="projects-tech">
+        HTML . CSS . JavaScript . Git . GitHub . AWS S3 . CloudFront . Terraform
+      </p>
+
+      <div class="projects-buttons">
+        <a href="https://dxyflnv5odrfl.cloudfront.net" class="cta" target="_blank" rel="noopener noreferrer">
+          Live Demo</a>
+        <a href="https://github.com/hninyiaye-code/cloud-library" class="projects-link" target="_blank" rel="noopener noreferrer">
+          View GitHub</a>
+      </div>
+    </div> 
+  </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Hninyi. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+</div> <!--Closing out the Page Wrapper-->
+<script>
+//Navigation Script
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+
+  </script>
+
+</body>
+</html>

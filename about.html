@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet"  href="css/style.css"/>
+    <!--use social icons add link font awesome suggested by ChatGPT(OpenAI,2025)-->   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="banner-body">
+<div class= "page-wrapper">
+  <header>
+    <!--Navigation Bar-->
+    <nav class= "navbar"  role="navigation"  aria-label="Main Navigation">
+     <div class=  "nav-brand" ><img src="images/profile avator.jpg"  alt="portfolio image" width="40px">Hninyi</div> 
+     <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+      ☰
+      <span class="visually-hidden"></span>
+    </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>  
+  </header>
+  <!--Banner image is generated help with CanvaAI(Canva,2025)-->
+   <header class="about-banner">
+    <img src= "images/A banner image clear soft tech background floating holographic data charts and cloud icons with digital network background, professional tech vibe.jpg"
+        alt="Banner Image" class="banner-img"> 
+    <h1 class="banner-title">About Me</h1>
+    </header>
+   <!--Layout guidance for the About Page structure(side-by-side photo and mission)
+     was assisted by ChatGPT(OpenAI,2025)--> 
+  <div class="about-content">
+     <div class="about-photo">
+      <img src=  "images/A floating animated profile card design with a smiling girl avatar, Hninyi, web development, and floating decorative elements like stars, waves, and circuits (1).jpg" alt="Profile photo" class="oval-photo">
+      <h2>HELLO, I'M HNINYI</h2>
+      <p>I am an IT graduate focused on Cloud Computing and Web Development. 
+        I enjoy building practical projects and learning how to deploy and manage applications using AWS cloud services.</p>
+      <div class="about-social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      </div><!--about photo close-->  
+      <a href="contact.html" class="cta-outline">Contact Me</a>
+     </div><!--about content close-->  
+    <!--Mission Statement-->  
+      <section class="about-info">
+        <h2>About Me</h2>
+        <p>My current skills include HTML, CSS, JavaScript, Git, GitHub, AWS, Linux and Terraform.
+          I am continuing to build hands-on projects as I prepare for entry-level cloud and web development roles.
+        </p>  
+    <!--Values List--> 
+        <h2 style="margin-top: 1.8rem;">Education & Certification</h2>
+        <ul>
+            <li>Associate Degree in Information Technology - Cloud Computing</li>
+            <li>AWS Certified Solutions Architect - Associate</li>
+            <li>Cloud Computing Certificate</li>
+        </ul>
+
+        <h2>Current Focus</h2>
+        <ul>
+          <li>Building cloud-based portfolio projects</li>
+          <li>Practicing Terraform and Infrastructure as Code</li>
+          <li>Improving front-end development skills</li>
+          <li>Learning AWS deployment and cloud architecture</li>
+        </ul>
+  </section>
+ </div><!--about content close--> 
+  <footer>
+       <p>&copy; 2026 Hninyi. Built with HTML, CSS and JavaScript.</p>
+  </footer> 
+</div> <!--page wrapper close-->  
+<script>
+//Navigation Script
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      links.classList.toggle('open');
+    });
+ </script>    
+</body>
+</html>
